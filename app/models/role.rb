@@ -2,8 +2,15 @@ class Role < ActiveRecord::Base
     has_many :auditions
 
 
-    
+def actors
+    actorArr=[]
   
+    const actorList = self.audtions.map do |actor|
+        audition.actor
+
+    end
+    actorArr << actorList
+end
 end
 
 
